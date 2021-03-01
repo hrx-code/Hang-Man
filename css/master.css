@@ -1,0 +1,128 @@
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+
+body{
+    background-color: #222e29;
+    color:#fff;
+    margin:0;
+    padding:0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height:90vh;
+    overflow: hidden;
+}
+#h1{
+    padding:20px 0;
+    margin:20px 0 0;
+}
+
+svg line{
+    stroke: #fff;
+    stroke-width: 2px;
+    stroke-linecap: round;
+}
+svg circle{
+    stroke:#fff;
+    stroke-width:2px;
+    fill:#222e29;
+}
+
+.game-container{
+    padding:20px 30px;
+    width:450px;
+    height:450px;
+    position: relative;
+    /* margin:auto ; */
+    padding-right:0;
+}
+.wrong-chars-container{
+    position:absolute;
+    top:35px;
+    right:25px;
+    display:flex;
+    flex-direction:column;
+    text-align: right;
+}
+
+.wrong-chars-container p{
+    margin:0 0 5px;
+}
+.wrong-chars-container span{
+    font-size:22px;
+}
+.word{
+    display:flex;
+    position: absolute;
+    bottom:10px;
+    left:50%;
+    transform: translate(-50%);
+}
+.word .letter{
+    border-bottom:2px solid #70cee6;
+    margin:0 2px;
+    padding:0;
+    display:inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size:30px;
+    height: 30px;
+    width:20px;
+}
+
+.figure-part{
+    display:none;
+}
+
+.popup-container{
+    margin:0;padding:0;
+    position: fixed;
+    top:0;right:0;bottom:0;left:0;
+    background: rgba(0, 0, 0, 0.3);
+    display: flex;
+    display:none;
+    align-items: center;
+    justify-content: center;
+}
+
+.popup{
+    background: #2980b9;
+    border-radius: 5px;
+    box-shadow: 0 15px 10px 3px rgba(0,0,0,0.1);
+    padding:20px;
+    text-align: center;
+}
+.popup button{
+    cursor: pointer;
+    background: #fff;
+    color:#2980b9;
+    border:none;
+    margin:10px 5px;
+    padding:10px 5px;
+    font-size:16px;
+    border-radius:5px;
+}
+.popup button:active{
+    transform:scale(0.9);
+}
+.popup button:focus{
+    outline:0;
+}
+
+
+.notification-container{
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 10px 10px 0 0;
+    padding:15px 10px;
+    position: absolute;
+    bottom:-50px;
+    transition:transform 0.3s ease-in-out;
+}
+
+.notification-container.show{
+    transform:translateY(-50px);
+}

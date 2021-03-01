@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="css/master.css">
+    <!-- <link rel="stylesheet" href="css/progress.css"> -->
+    <title>Hang-Man Game</title>
+  </head>
+  <body>     
+      <h1 id="h1">Hang-Man</h1>
+      <p>Find the hidden word - Enter a letter</p>
+      <div class="game-container" id="game-container">
+           <svg height="250" width="200" class="figure-container">
+                <!-- Rod -->
+                <line x1="60" y1="20" x2="140" y2="20" />
+                <line x1="140" y1="20" x2="140" y2="50" />
+                <line x1="60" y1="20" x2="60" y2="230" />
+                <line x1="20" y1="230" x2="100" y2="230" />
+                <!-- Head -->
+                <circle cx="140" cy="70" r="20" class="figure-part" />
+                <!-- Body -->
+                <line x1="140" y1="90" x2="140" y2="150" class="figure-part" />
+                <!-- Arms -->
+                <line x1="140" y1="120" x2="120" y2="100" class="figure-part" />
+                <line x1="140" y1="120" x2="160" y2="100" class="figure-part" />
+                <!-- Legs -->
+                <line x1="140" y1="150" x2="120" y2="180" class="figure-part" />
+                <line x1="140" y1="150" x2="160" y2="180" class="figure-part" />
+          </svg>
+
+          <div class="wrong-chars-container">
+                <div id="wrong-chars">
+                    
+                </div>
+                
+            </div>
+
+            <div class="word" id="word">
+                
+            </div>
+
+        </div>
+        
+        
+        <!-- WIN OR LOSS -->
+        <div class="popup-container" id="popup-container">
+            <div class="popup">
+                <h1 id="final-message"></h1>
+                <button id="play-again">Play Again</button>
+            </div>
+        </div>
+        <!-- NOTIFICATION -->
+        <div class="notification-container" id="notification-container">
+            <p>you have already entered this letter</p>
+        </div>
+
+     <script src="js/script.js"></script>
+  </body>
+</html>  
